@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent-red: #ed5564;
+  --color-accent-red-hover: #d73847;
+  --color-accent-red-muted: rgba(237, 85, 100, 0.15);
+  --color-velune-bg: #0a0b0e;
+  --color-velune-surface: #13151a;
+  --color-velune-card: #181b22;
+  --color-velune-border: rgba(255, 255, 255, 0.08);
+}
+
+:root {
+  color-scheme: dark;
+  --velune-primary: #ed5564;
+  --velune-bg: #0a0b0e;
+  --velune-surface: #13151a;
+  --velune-card: #181b22;
+  --velune-border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--velune-bg);
+  color: #f1f5f9;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  user-select: none;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background: rgba(19, 21, 26, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-dock {
+  background: rgba(14, 16, 20, 0.88);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Sliders */
+input[type="range"] {
+  accent-color: #ed5564;
+}
+
+/* Text Truncation helper */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
